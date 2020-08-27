@@ -1,27 +1,14 @@
+/* CSS style sheet!*/
+
 body {
     margin: 0;
     background: #2c2f33;
     font-family: 'Roboto', sans-serif;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-
 header {
     background: #7289da;
 
-}
-
-button {
-    float: left;
-    padding: 15px 0px;
-    background-color: transparent;
-    overflow: hidden;
-    outline: none;
-    border: none;
 }
 
 header::after {
@@ -31,20 +18,32 @@ header::after {
 }
 
 
-nav {
+header button {
+    float: left;
+    padding: 15px 0px;
+    background-color: transparent;
+    overflow: hidden;
+    outline: none;
+    border: none;
+}
+
+.navigation {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header nav {
     float: right;
 }
 
 
-
-nav ul {
+header nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-
-nav li {
+header nav li {
     display: inline-block;
     margin-left: 70px;
     padding: 25px 0px;
@@ -52,21 +51,18 @@ nav li {
     position: relative;
 }
 
-
-nav ul li a {
+header nav ul li a {
     color: #23272a;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 21px;
 }
 
-nav ul li a:hover {
+header nav ul li a:hover {
     color: #000;
 }
 
-
-
-nav ul li a::before {
+header nav ul li a::before {
     content: '';
     display: block;
     height: 5px;
@@ -80,7 +76,80 @@ nav ul li a::before {
     transition: all ease-in-out 250ms;
 }
 
+header nav ul li a:hover::before {
+    width: 100%;
+}
 
-nav ul li a:hover::before {
+.homepage h1{
+    color: #ffffff;
+    padding-left: 150px;
+}
+
+.homepage h3{
+    color: #eeffee;
+    padding-left: 170px;
+}
+
+.homepage h4{
+    color: #eeffee;
+    padding-left: 170px;
+}
+
+
+footer {
+    background: #7289da;
+
+}
+
+footer::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+footer nav {
+    float: left;
+
+}
+
+footer nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+footer nav ul li {
+    display: inline-block;
+    margin-left: 70px;
+    padding: 25px 0px;
+
+    position: relative;
+}
+footer nav ul li a {
+    color: #23272a;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+footer nav ul li a:hover {
+    color: #000;
+}
+
+footer nav ul li a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: #444444;
+
+    position: absolute;
+    bottom: 15px;
+    width: 0%;
+
+    transition: all ease-in-out 250ms;
+}
+
+footer nav ul li a:hover::before {
     width: 100%;
 }
