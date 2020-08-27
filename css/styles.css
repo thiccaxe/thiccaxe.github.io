@@ -15,6 +15,15 @@ header {
 
 }
 
+button {
+    float: left;
+    padding: 15px 0px;
+    background-color: transparent;
+    overflow: hidden;
+    outline: none;
+    border: none;
+}
+
 header::after {
     content: '';
     display: table;
