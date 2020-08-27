@@ -2,7 +2,7 @@
 
 <html lang="en">
 <head>
-  <title>minecraft</title>
+  <title>Minecraft</title>
   
   <link href="../css/styles.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&display=swap" rel="stylesheet">
@@ -12,29 +12,22 @@
   <meta name="author" content="thiccaxe">
 
 </head>
-
 <body>
   <header>
     <div class="navigation">
-
-      <button type= "submit" name="home" value="home-page" onclick="window.location.href='../index.html';">
+      <button type= "submit" name="home" value="home-page" onclick="window.location.href='../index';">
         <img src="../img/logo.png" />
       </button>
-
       <nav>
         <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../minecraft/index.html">Minecraft</a></li>
-          <li><a href="../othergames/index.html">Other Video Games</a></li>
-          <li><a href="../cubing/index.html">Cubing</a></li>
+          <li><a href="../index">Home</a></li>
+          <li><a href="../minecraft/index">Minecraft</a></li>
+          <li><a href="../othergames/index">Other Video Games</a></li>
+          <li><a href="../cubing/index">Cubing</a></li>
         </ul>
       </nav>
-
-
-
     </div>
   </header>
-
   <main>
     <div class="homepage">
       <div id="welcomemessage">
@@ -45,30 +38,19 @@
               "Minceraft!"
             ];
             var quote = quotes[Math.floor(Math.random() * quotes.length)];
-            document.getElementById("welcomemessage").innerHTML = '<h1>' + quote + "</h1><h3>Minecraft page</h3>";
+            document.getElementById("welcomemessage").innerHTML = '<h1>' + quote + "</h1><h3>It's literally a block game.</h3>";
             })();
         </script>
     </div>
   </main>
-
-
   <footer>
     <div class="footer-info">
-
-
       <nav>
         <ul>
           <li><a href="../index.html">home</a></li>
           <li><a href="#">contact</a></li>
         </ul>
       </nav>
-
-
-
-
     </div>
   </footer>
-
-
-
 </body>
