@@ -6,7 +6,7 @@
 <head>
   <title>thiccaxe.net</title>
   <!-- Link to style sheets and fonts -->
-  <link href="./css/styles.css" rel="stylesheet" type="text/css">
+  <link href="../css/styles.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&display=swap" rel="stylesheet">
   <!-- Meta tags -->
   <meta charset="utf-8">
@@ -17,6 +17,7 @@
 </head>
 
 
+
 <body>
   <!-- Header includes logo and navigation bar -->
   <header>
@@ -24,10 +25,10 @@
 
 
       <!-- Button has an image inside of it -->
-      <button type= "submit" name="home" value="home-page" onclick="window.location.href='#';">
+      <button type= "submit" name="home" value="home-page" onclick="window.location.href='../';">
         <picture>
-          <source srcsert="img/largelogo.png" media="(min-width: 450px)" >
-          <img src="img/logo.png" alt="logo"/>
+          <source srcsert="../img/largelogo.png" media="(min-width: 450px)" >
+          <img src="../img/logo.png" alt="logo"/>
         </picture>
         
       </button>
@@ -35,10 +36,10 @@
       <!-- Navigation at the top of the page with links arranged to the side by side -->
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="./minecraft">Minecraft</a></li>
-          <li><a href="./othergames">Other Video Games</a></li>
-          <li><a href="./cubing">Cubing</a></li>
+          <li><a href="../">Home</a></li>
+          <li><a href="../minecraft">Minecraft</a></li>
+          <li><a href="../othergames">Other Video Games</a></li>
+          <li><a href="../cubing">Cubing</a></li>
         </ul>
       </nav>
 
@@ -49,20 +50,9 @@
   <main>
     <div class="homepage">
       <div id="welcomemessage">
-        <!-- A small script to show a random welcome message -->
-        <script>
-          (function() {
-            var quotes = [
-              "Welcome!",
-              "Good to see you!",
-              "Hi!",
-              "Hello!"
-            ];
-            var quote = quotes[Math.floor(Math.random() * quotes.length)];
-            document.getElementById("welcomemessage").innerHTML = '<h1>' + quote + "</h1><h3>This is thiccaxe.</h3><h4>I'll post all sorts of things here, hopefully you find some stuff useful or fun to play around with!</h4>";
-            })();
-        </script>
+        <h1>You can contact me using this form</h1>
     </div>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdiW1t2bkQZRBfu-VKe_uXPHhuwm3OeX0snX4U_V4v89bbXAw/viewform?embedded=true" width="1500" height="779" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   </main>
 
   <!-- Footer has links that aren't too important but if you are scrolling to the bottom you probably need them-->
@@ -72,8 +62,8 @@
       <!-- A similar list to the one in the header-->
       <nav>
         <ul>
-          <li><a href="./">home</a></li>
-          <li><a href="./contact/">contact</a></li>
+          <li><a href="../">home</a></li>
+          <li><a href="">contact</a></li>
         </ul>
       </nav>
 

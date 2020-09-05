@@ -43,7 +43,7 @@ header nav ul {
     list-style: none;
 }
 
-header nav li {
+header nav ul li {
     display: inline-block;
     margin-left: 70px;
     padding: 25px 0px;
@@ -93,6 +93,23 @@ header nav ul li a:hover::before {
 .homepage h4{
     color: #eeffee;
     padding-left: 170px;
+}
+
+@media screen and (min-width: 450px){
+    .homepage h1 {
+        padding-left: 8px;
+    }
+    .homepage h3 {
+        padding-left: 8px;
+    }
+    .homepage h4 {
+        padding-left: 8px;
+    }
+
+    footer nav ul li {
+        margin-left: 8px;
+    }
+    
 }
 
 
