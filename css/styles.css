@@ -95,22 +95,7 @@ header nav ul li a:hover::before {
     padding-left: 170px;
 }
 
-@media screen and (min-width: 450px){
-    .homepage h1 {
-        padding-left: 8px;
-    }
-    .homepage h3 {
-        padding-left: 8px;
-    }
-    .homepage h4 {
-        padding-left: 8px;
-    }
 
-    footer nav ul li {
-        margin-left: 8px;
-    }
-    
-}
 
 
 footer {
