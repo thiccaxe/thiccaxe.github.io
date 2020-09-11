@@ -4,7 +4,7 @@
 
 
 <head>
-  <title>thiccaxe.net</title>
+  <title>thiccaxe.net - HOME</title>
   <!-- Link to style sheets and fonts -->
   <link href="./css/styles.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&display=swap" rel="stylesheet">
@@ -26,8 +26,7 @@
       <!-- Button has an image inside of it -->
       <button type= "submit" name="home" value="home-page" onclick="window.location.href='#';">
         <picture>
-          <source srcsert="img/largelogo.png" media="(min-width: 450px)" >
-          <img src="img/logo.png" alt="logo"/>
+          <img src="./img/largelogo.png" srcset="./img/logo.png 700w, ./img/largelogo.png 1400w">
         </picture>
         
       </button>
@@ -50,18 +49,7 @@
     <div class="homepage">
       <div id="welcomemessage">
         <!-- A small script to show a random welcome message -->
-        <script>
-          (function() {
-            var quotes = [
-              "Welcome!",
-              "Good to see you!",
-              "Hi!",
-              "Hello!"
-            ];
-            var quote = quotes[Math.floor(Math.random() * quotes.length)];
-            document.getElementById("welcomemessage").innerHTML = '<h1>' + quote + "</h1><h3>This is thiccaxe.</h3><h4>I'll post all sorts of things here, hopefully you find some stuff useful or fun to play around with!</h4>";
-            })();
-        </script>
+        <script src='./scripts/script.js'></script>
     </div>
   </main>
 
