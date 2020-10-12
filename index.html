@@ -1,76 +1,67 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home - thiccaxe.net</title>
 
-
-
-<head>
-  <title>thiccaxe.net - HOME</title>
-  <!-- Link to style sheets and fonts -->
-  <link href="./css/styles.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&display=swap" rel="stylesheet">
-  <!-- Meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Welcome to thiccaxe.net! Minecraft and more!">
-  <meta name="author" content="thiccaxe">
-  <meta name="keywords" content="thiccaxe, minecraft, redstone, hypixel, skyblock">
-</head>
-
-
-<body>
-  <!-- Header includes logo and navigation bar -->
-  <header>
-    <div class="navigation">
-
-
-      <!-- Button has an image inside of it -->
-      <button type= "submit" name="home" value="home-page" onclick="window.location.href='#';">
-        <picture>
-          <img src="./img/largelogo.png" srcset="./img/logo.png 700w, ./img/largelogo.png 1400w">
-        </picture>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="./assets/styles/styles.css" type="text/css">
         
-      </button>
-
-      <!-- Navigation at the top of the page with links arranged to the side by side -->
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="./minecraft">Minecraft</a></li>
-          <li><a href="./othergames">Other Video Games</a></li>
-          <li><a href="./cubing">Cubing</a></li>
-        </ul>
-      </nav>
-
-    </div>
-  </header>
-
-  <!-- Main contains all the useful content in the page -->
-  <main>
-    <div class="homepage">
-      <div id="welcomemessage">
-        <!-- A small script to show a random welcome message -->
-        <script src='./scripts/script.js'></script>
-    </div>
-  </main>
-
-  <!-- Footer has links that aren't too important but if you are scrolling to the bottom you probably need them-->
-  <footer>
-    <div class="footer-info">
-
-      <!-- A similar list to the one in the header-->
-      <nav>
-        <ul>
-          <li><a href="./">home</a></li>
-          <li><a href="./contact/">contact</a></li>
-        </ul>
-      </nav>
 
 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    </div>
-  </footer>
+    </head>
+    <body>
+        <header>
+            <div class="mainnav">
+                <script src="./assets/scripts/overlaymenu.js"></script>
+                <script>toggleMode();</script> <!--Default to dark mode :)-->
+
+                <div id='myNav' class="overlay">
+                    <a href="javascript:void(0);" class="closebtn" onclick="closeNav()"><i class="material-icons">minimize</i></a>
+
+                    <div class="overlay-content">
+                        <a href="#"><i class="material-icons">home</i> Home</a>
+                        <a href="#">Other</a>
+                        <a href="#" id='darkmodetoggle' role="button" onclick="toggleMode();"><i class="material-icons">check_box</i> Dark Mode</a>
+                    </div>
+                </div>
+
+
+                <button class="openmenu">
+                    <span onclick="openNav()"><i class="material-icons">add</i><i class="material-icons">home</i></span>
+                </button>
+                <div class='titletext'>
+                    <span onclick="javascript:void(0);">Home - thiccaxe.net</span>
+                </div>
+            </div>
+            <div class="tabs">
+                <script src="./assets/scripts/tabs.js"></script>
+                <div class="tab">
+                    <button class="tablinks" onclick="loadHTML(event, 'Tester1')">Tester1</button>
+                    <button class="tablinks" onclick="loadHTML(event, 'Tester2')">Tester2</button>
+                    <button class="tablinks" onclick="loadHTML(event, 'Tester3')">Tester3</button>
+
+
+                </div>
+
+                <div id="Tester1" class="tabcontent">
+                    <h3>Test1</h3>
+                    <p>this is test number 1</p>
+                </div>
+                <div id="Tester2" class="tabcontent">
+                    <h3>Test2</h3>
+                    <p>this is test number 2</p>
+                </div>
+                <div id="Tester3" class="tabcontent">
+                    <h3>Test3</h3>
+                    <p>this is test number 3</p>
+                </div>
+            </div>
+        </header>
+    </body>
 
 
 
-</body>
+</html>
