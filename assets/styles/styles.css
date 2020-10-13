@@ -1,12 +1,13 @@
 .tab {
     overflow: hidden;
-    border: 1pk solid #cccccc;
-    background-color: #f1f1f1;
-
+    border: 1px solid inherit;
+    background-color: inherit;
+    color: inherit;
 }
 
-.tab button {
+.tablinks {
     background-color: inherit;
+    color: inherit;
     float: left;
     border: none;
     outline: none;
@@ -16,21 +17,19 @@
 }
 
 .tab button:hover {
-    background-color: #dddddd;
+    background-color: inherit;
 }
 
 .tab button.active {
-    background-color: #cccccc;
+    border: solid 1px;
 }
 
 .tabcontent {
     display: none;
     padding: 6px 12px;
-    border: 1px solid #cccccc;
+    border: inherit;
     border-top: none;
 }
-
-
 
 .overlay {
     height: 100%;
@@ -39,8 +38,7 @@
     z-index: 1;
     left: 0;
     top: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.7);
+    background-color: rgba(0, 0, 0, 0.9);
     overflow-x: hidden;
     transition: 0.5s;
 }
@@ -69,7 +67,8 @@
 .overlay .closebtn {
     position: absolute;
     float: top;
-    right: 45px;
+    margin: none;
+    left: 45px;
     font-size: 40px;
 }
 
@@ -102,12 +101,12 @@
 
 body {
     padding: 15px;
-    background-color: gainsboro;
+    background-color: #f7f7f7;
     color: #1c1d1d;
     font-size: 25px;
 }
 
 .dark-mode {
     background-color: #1c1d1d;
-    color: gainsboro;
+    color: #f7f7f7;
 }

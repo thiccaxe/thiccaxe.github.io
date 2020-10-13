@@ -8,11 +8,5 @@ function closeNav() {
 
 
 function toggleMode() {
-    document.body.classList.toggle("dark-mode");
-    if (document.getElementById("darkmodetoggle").innerHTML == '<i class="material-icons">check_box_outline_blank</i> Dark Mode') {
-    document.getElementById("darkmodetoggle").innerHTML = '<i class="material-icons">check_box</i> Dark Mode';
-        }
-    else {
-        document.getElementById("darkmodetoggle").innerHTML = '<i class="material-icons">check_box_outline_blank</i> Dark Mode'
-    }
+    document.getElementById("darkmodetoggle").innerHTML = document.body.classList.toggle("dark-mode") ? '<i class="material-icons">check_box</i> Dark Mode' : '<i class="material-icons">check_box_outline_blank</i> Dark Mode'
 }
