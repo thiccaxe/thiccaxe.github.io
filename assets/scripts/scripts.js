@@ -1,3 +1,5 @@
+const URLREGEX = /[.:]/g
+
 //General Use Functions
 function delay (URL) {
     setTimeout( function() { window.location = URL }, 200 );
@@ -10,21 +12,32 @@ function setCookie(name, value, ttl, path="/") {
     var value = escape( value ) + ( ( ttl == null ) ? "" : "; expires=" + exdate.toUTCString() );
     document.cookie = name + "=" + value + "; path="+path;
     console.log("set cookie: " + name + "=" + value + "; path="+path);
+    document.getElementById('devtools').innerHTML+="<p>" + "set cookie: " + name + "=" + value + "; path="+path + "</p>"
+    //document.getElementById('devtools').innerHTML=document.cookie
+    //alert(document.cookie + "\nset cookie: " + name + "=" + value + "; path="+path)
 }
 
 function getCookie(name) {
-    var name = name+ "=";
+    var ckname = name+ "=";
     var cookies = decodeURIComponent(document.cookie).split(';');
+    console.log('Getting Cookies with name: ' + name);
+    var gotCookies = false;
     for (var i =0; i < cookies.length; i++) {
         var cookie = cookies[i];
         while (cookie.charAt(0) == ' ') {
             cookie = cookie.substring(1);
         }
-        if (cookie.indexOf(name) == 0) {
-            return cookie.substring(name.length, cookie.length)
+        if (cookie.indexOf(ckname) == 0) {
+            console.log("got cookie: " + name + " = " + cookie.substring(ckname.length, cookie.length));
+            document.getElementById('devtools').innerHTML+="<p>got cookie: " + name + " = " + cookie.substring(ckname.length, cookie.length) + "</p>";
+            return cookie.substring(ckname.length, cookie.length);
+            gotCookies = true;
         }
     }
-    return "";
+    if (gotCookies==false) {
+        console.log("Found no cookies with name: " + name);
+        document.getElementById('devtools').innerHTML+="<p>Got no cookies with name: " + name + "</p>";
+    }
 }
 
 function setDarkModeCookie() {
@@ -37,14 +50,14 @@ function setDarkModeCookie() {
 }
 
 function setTabCookie(tabID) {
-    currentPage = window.location.href.split('://')[1].replace('#', '');
-    setCookie("visitedTab:"+currentPage, tabID, 365, currentPage);
+    currentPage = window.location.href.split('://')[1].replaceAll("#", '').replaceAll(URLREGEX, "_").replaceAll('/', '_');
+    setCookie("visitedTab_"+currentPage, tabID, 365, currentPage);
 }
 
 function selectTabFromCookie() {
-    currentPage = window.location.href.split('://')[1].replace('#', '');
-    cookie = getCookie("visitedTab:" + currentPage);
-    if (cookie != "") {
+    currentPage = window.location.href.split('://')[1].replaceAll("#", '').replaceAll(URLREGEX, "_").replaceAll('/', '_');
+    cookie = getCookie("visitedTab_" + currentPage);
+    if (cookie != null) {
         document.getElementById("TAB:" + cookie).click();
     }
 }
