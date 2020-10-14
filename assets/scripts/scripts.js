@@ -51,7 +51,7 @@ function setDarkModeCookie() {
 
 function setTabCookie(tabID) {
     currentPage = window.location.href.split('://')[1].replaceAll("#", '').replaceAll(URLREGEX, "_").replaceAll('/', '_');
-    setCookie("visitedTab_"+currentPage, tabID, 365, currentPage);
+    setCookie("visitedTab_"+currentPage, tabID, 365, window.location.href.replaceAll("#", ''));
 }
 
 function selectTabFromCookie() {
