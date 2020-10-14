@@ -5,18 +5,15 @@
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="/assets/styles/styles.css" type="text/css">
-        
-
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <script src="/assets/scripts/cookies.js"></script>
+        <script src="/assets/scripts/scripts.js"></script>
 
     </head>
     <body>
         <header>
             <div class="mainnav">
-                <script src="/assets/scripts/overlaymenu.js"></script>
                 
 
 
@@ -25,7 +22,6 @@
                         <a href="javascript:void(0);" class="closebtn" onclick="closeNav()"><i class="material-icons">clear</i></a>
                     </div>
                     <div class="overlay-content">
-                        <script src="/assets/scripts/scripts.js"></script>
                         <a href="javascript:delay('/')" onclick="closeNav();"><i class="material-icons">home</i> Home</a>
                         <a href="#" onclick="closeNav();"><i class="material-icons">view_quilt</i> Minecraft</a>
                         <a href="#" id='darkmodetoggle' role="button" onclick="toggleMode(); setDarkModeCookie(); closeNav();"><i class="material-icons">check_box_outline_blank</i> Dark Mode</a>
@@ -62,14 +58,13 @@
                 </script>
             </div>
             <div class="tabs">
-                <script src="/assets/scripts/tabs.js"></script>
                 <div class="tab">
-                    <button class="tablinks" onclick="loadHTML(event, 'About')" id="defaultTab">About</button>
-                    <button class="tablinks" onclick="loadHTML(event, 'Lorem')">Lorem</button>
-                    <button class="tablinks" onclick="loadHTML(event, 'Ipsum')">Ipsum</button>
+                    <button class="tablinks" onclick="loadHTML(event, 'About')" id="TAB:About">About</button>
+                    <button class="tablinks" onclick="loadHTML(event, 'Lorem')" id="TAB:Lorem">Lorem</button>
+                    <button class="tablinks" onclick="loadHTML(event, 'Ipsum')" id="TAB:Ipsum">Ipsum</button>
 
                 </div>
-                <script>setTimeout( function() {document.getElementById("defaultTab").click();}, 0); </script>
+                <script>setTimeout( function() {selectTabFromCookie();}, 0); </script>
                 <div id="About" class="tabcontent">
                     
                     <p></p>

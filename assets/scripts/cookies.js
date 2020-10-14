@@ -1,8 +1,8 @@
-function setCookie(name, value, ttl) {
+function setCookie(name, value, ttl, path="/") {
     var exdate = new Date();
     exdate.setDate( exdate.getDate() + ttl);
     var value = escape( value ) + ( ( ttl == null ) ? "" : "; expires=" + exdate.toUTCString() );
-    document.cookie = name + "=" + value + "; path=/"; 
+    document.cookie = name + "=" + value + "; path="+path; 
 }
 
 function getCookie(name) {
@@ -28,4 +28,9 @@ function setDarkModeCookie() {
     } else {
         setCookie("darkmode", "false", 365);
     }
+}
+
+function setTabCookie(tabID) {
+    currentPage = window.location.href;
+    setCookie("visitedTab"+currentPage, tabID);
 }
