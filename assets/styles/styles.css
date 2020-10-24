@@ -1,3 +1,15 @@
+
+button {
+    background-color: inherit;
+    color: inherit;
+    float: top;
+    border: none;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 26px;
+}
+
 .tab {
     overflow: hidden;
     border: 1px solid inherit;
@@ -80,18 +92,7 @@
     font-display: swap;
 }
 
-.openmenu {
-    background-color: inherit;
-    color: inherit;
-    float: top;
-    border: none;
-    text-decoration: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 26px;
-}
-
-.mainnav .titletext {
+.navigation .titletext {
     text-align: center;
     padding-bottom: 15px;
     font-display: swap;
