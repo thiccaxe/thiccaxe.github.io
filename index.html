@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <head>
+    <head id="head">
         <title>Home - thiccaxe.net</title>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="/assets/styles/styles.css" type="text/css">
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
         <script src="/assets/scripts/scripts.js"></script>
 
     </head>
-    <body>
+    <body id="body">
         <header>
             <div class="navigation">
 
+                <button>
+                    <span onclick="openNav()"><i class="material-icons">add</i><i class="material-icons">home</i></span>
+                </button>
 
                 <div id='overlay-container' class="overlay">
 
                     <div id='close-overlay-mobile'>
-                        <a href="javascript:void(0);" class="closebtn" onclick="closeNav()"><i class="material-icons">clear</i></a>
+                        <a href="javascript:void(0);" class="closebtn" onclick="closeNav()"><i class="material-icons">clear</i>ㅤㅤㅤ</a>
                     </div>
 
                     <div class="overlay-content">
@@ -27,6 +33,7 @@
                         <a href="javascript:void(0);" onclick="goTo('/');"><i class="material-icons">home</i> Home</a>
                         <a href="javascript:void(0);" onclick="goTo('/minecraft/');"><i class="material-icons">view_quilt</i> Minecraft</a>
                         <a href="javascript:void(0);" onclick="goTo('Toggle Theme');" id='darkmodetoggle'><i class="material-icons">check_box_outline_blank</i> Dark Mode</a>
+                        <a href="javascript:void(0);" onclick="goTo('Show Tools');"><i class="material-icons">code</i> Dev Tools</a>
 
                         <div id="close-overlay-desktop">
                             <a href="javascript:void(0);" onclick="closeNav()"><i class="material-icons">clear</i></a>
@@ -36,11 +43,27 @@
 
                 </div>
 
+                <div id='ntfn-container' class="ntfn">
+
+                    <div id='close-ntfn-mobile'>
+                        <a href="javascript:void(0);" class="ntfn-closebtn" onclick="closeNTFN()">ㅤㅤㅤ<i class="material-icons">clear</i></a>
+                    </div>
+
+                    <div class="ntfn-content" id="ntfn-content">
+
+                        <div id="close-ntfn-desktop">
+                            <a href="javascript:void(0);" class="ntfn-closebtn" onclick="closeNTFN()"><i class="material-icons">clear</i></a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                
 
 
-                <button>
-                    <span onclick="openNav()"><i class="material-icons">add</i><i class="material-icons">home</i></span>
-                </button>
+
+                
 
                 <div class='titletext'>
                     <span>Home - thiccaxe.net</span>
