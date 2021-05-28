@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Error - thiccaxe.net</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="/assets/styles/styles.css" type="text/css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="/assets/scripts/scripts.js"></script>
+
+    </head>
+    <body>
+        <header>
+            <div class="mainnav">
+                
+
+
+                <div id='myNav' class="overlay">
+                    <div id='closebtnformobile'>
+                        <a href="javascript:void(0);" class="closebtn" onclick="closeNav()"><i class="material-icons">clear</i></a>
+                    </div>
+                    <div class="overlay-content">
+                        <a href="javascript:delay('/')" onclick="closeNav();"><i class="material-icons">home</i> Home</a>
+                        <a href="javascript:delay('/minecraft/')" onclick="closeNav();"><i class="material-icons">view_quilt</i> Minecraft</a>
+                        <a href="#" id='darkmodetoggle' role="button" onclick="toggleMode(); setDarkModeCookie(); closeNav();"><i class="material-icons">check_box_outline_blank</i> Dark Mode</a>
+                        <div id="closebtnfordesktop">
+                            <a href="javascript:void(0);" onclick="closeNav()"><i class="material-icons">clear</i></a>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+                    if (isMobile == false) {
+                        console.log(document.getElementById("closebtnformobile").innerHTML = "");
+                    } else {
+                        console.log(document.getElementById("closebtnfordesktop").innerHTML = "");
+                    }
+                </script>
+
+
+                <button class="openmenu">
+                    <span onclick="openNav()"><i class="material-icons">add</i><i class="material-icons">home</i></span>
+                </button>
+                <div class='titletext'>
+                    <span onclick="javascript:void(0);">Error - thiccaxe.net</span>
+                </div>
+                <script>
+                    var darkmode = getCookie("darkmode");
+                    if (darkmode != "") {
+                        if (darkmode == "true") {
+                            toggleMode();
+                        }
+                    } else {
+                        setCookie("darkmode", "false", 365);
+                    }
+                </script>
+            </div>
+            <div class="tabs">
+                <div class="tab">
+                    <button class="tablinks" onclick="loadHTML(event, '404')" id="defaultTab">404</button>
+                    <button class="tablinks" onclick="loadHTML(event, '403')">403</button>
+                    <button class="tablinks" onclick="loadHTML(event, '500')">500</button>
+                </div>
+                <script>setTimeout( function() {document.getElementById("defaultTab").click();}, 0); </script>
+
+                <div id="404" class="tabcontent">
+                    
+                    <p></p>
+                    <p>That page or file was not found!</p>
+                    <p>Go back to the last page or the home page</p>
+                </div>
+                <div id="403" class="tabcontent">
+                    <p></p>
+                    <p>Access to that page or file is forbidden!</p>
+                    <p>Go back to the last page or the home page</p>
+                </div>
+                <div id="500" class="tabcontent">
+                    <p></p>
+                    <p>The server had an internal server error while trying to access this page or file!</p>
+                    <p>Go back to the last page or the home page</p>
+                </div>
+                <button class="openmenu">
+                    <span onclick="javascript:delay('/', 0)"><i class="material-icons">home</i></span>
+                </button>
+                <button class="openmenu">
+                    <span onclick="window.history.go(-1);"><i class="material-icons">arrow_back</i></span>
+                </button>
+            </div>
+        </header>
+    </body>
+
+
+
+</html>
